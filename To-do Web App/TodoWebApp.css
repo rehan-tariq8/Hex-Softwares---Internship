@@ -1,0 +1,157 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 15px;
+        }
+
+        .task-container {
+            width: 100%;
+            max-width: 850px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .task-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .task-heading h1 {
+            font-size: 50px;
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .task-heading p {
+            color: #d1d5db;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        .task-input {
+            width: 100%;
+            height: 55px;
+            border: none;
+            outline: none;
+            border-radius: 14px;
+            padding-left: 18px;
+            font-size: 17px;
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .task-input::placeholder {
+            color: #d1d5db;
+        }
+
+        .add-btn {
+            width: 100%;
+            height: 55px;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(to right, #8b5cf6, #6d28d9);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .add-btn:hover {
+            transform: scale(1.03);
+        }
+
+        .task-list {
+            margin-top: 35px;
+        }
+
+        .task-item {
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            transition: 0.3s;
+        }
+
+        .task-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .task-text {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            word-break: break-word;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        .task-buttons button {
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            color: white;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .complete-btn {
+            background: linear-gradient(to right, #22c55e, #16a34a);
+        }
+
+        .delete-btn {
+            background: linear-gradient(to right, #ef4444, #dc2626);
+        }
+
+        .task-buttons button:hover {
+            transform: scale(1.08);
+        }
+
+        @media(max-width:768px) {
+
+            .task-container {
+                padding: 30px 20px;
+            }
+
+            .task-heading h1 {
+                font-size: 38px;
+            }
+
+            .task-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .task-buttons button {
+                margin-left: 0;
+                margin-right: 10px;
+            }
+        }
